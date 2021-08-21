@@ -3,7 +3,7 @@
 	import Board from "./Board.svelte";
 </script>
 
-<div class="game">
+<main>
 	<div>
 		<Board />
 	</div>
@@ -11,7 +11,7 @@
 		<div></div>
 		<ol></ol>
 	</div>
-</div>
+</main>
 
 <style>
 
@@ -20,8 +20,7 @@
   margin: 20px;
 }
 
-
-.game {
+main {
 	display: flex;
 	flex-direction: row;
 }
