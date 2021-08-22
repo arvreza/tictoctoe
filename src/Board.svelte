@@ -1,14 +1,17 @@
 <script>
 import Square from "./Square.svelte";
 import PlayerStatus from "./PlayerStatus.svelte";
+import WinnerStatus from "./WinnerStatus.svelte";
 
 var squares = new Array(9).fill('');
 var isNext = true;
+var winner = '';
 
 function handleClick(index) {
     if (squares[index] != '') return;
 
     if (calculateWinner(squares) || squares[index]) {
+      winner = isNext? "O": "X";
       return;
     }
     
@@ -65,6 +68,8 @@ function calculateWinner() {
         <Square value={squares[7]} on:setState={() => handleClick(7)} />
         <Square value={squares[8]} on:setState={() => handleClick(8)} />
     </div>
+
+    <WinnerStatus winner={winner}/>
 </div>
 
 <style>
