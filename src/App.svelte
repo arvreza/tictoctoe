@@ -7,10 +7,6 @@
 	<div>
 		<Board />
 	</div>
-	<div class="game-info">
-		<div></div>
-		<ol></ol>
-	</div>
 </main>
 
 <style>
@@ -25,7 +21,4 @@ main {
 	flex-direction: row;
 }
 
-.game-info {
-  margin-left: 20px;
-}
 </style>
